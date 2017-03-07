@@ -1,6 +1,9 @@
 /*
  * 4 JavaScript objects containing Bio, Education, Work and Projects, used to populate HTML
  */
+
+ // BIO SECTION INCLUDING DISPLAY FUNCTION
+
 var bio = {
     "name": "Richard Chan",
     "role": "Front-End Engineer",
@@ -37,6 +40,8 @@ var bio = {
     }
 
 };
+
+// EDUCATION SECTION INCLUDING DISPLAY FUNCTION
 
 var education = {
     "schools": [{
@@ -99,6 +104,8 @@ var education = {
         });
     }
 };
+
+// WORK SECTION INCLUDING DISPLAY FUNCTION
 
 var work = {
     "jobs": [{
@@ -163,6 +170,8 @@ var work = {
 
 };
 
+// PROJECTS SECTION INCLUDING DISPLAY FUNCTION
+
 var projects = {
     "projects": [{
             "title": "Classic Arcade Game",
@@ -212,6 +221,8 @@ var projects = {
     }
 
 };
+
+// DISPLAYING ALL BIO, EDUCATION, WORK, AND PROJECTS ON PAGE
 
 bio.display();
 education.display();
