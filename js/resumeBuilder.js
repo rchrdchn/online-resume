@@ -20,26 +20,35 @@ var bio = {
     "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "JSON / AJAX", "Sketch / Adobe Photoshop", "WordPress"],
     "display": function() {
 
-        $("#header").prepend(HTMLheaderRole.replace('%data%', bio.role));
-        $("#header").prepend(HTMLheaderName.replace('%data%', bio.name));
+        $("#header").prepend(HTMLheaderRole.replace('%data%', bio.role)); // this makes ROLE shows up on top
 
-        $.each(bio.contacts, function(key, value) {
-            $('#topContacts').append(HTMLcontactGeneric.replace("%contact%", key).replace('%data%', value));
-            $('#footerContacts').append(HTMLcontactGeneric.replace("%contact%", key).replace('%data%', value));
-        });
+        $("#header").prepend(HTMLheaderName.replace('%data%', bio.name)); // this makes NAME shows up on top before ROLE (PREPEND)
 
         $('#header').append(HTMLbioPic.replace('%data%', bio.biopic));
+        
         $('#header').append(HTMLwelcomeMsg.replace('%data%', bio.welcomeMessage));
 
         $('#header').append(HTMLskillsStart);
 
-        $.each(bio.skills, function(value) {
-            $('#skills').append(HTMLskills.replace('%data%', bio.skills[value]));
+        // adding all skills to top of the page - next to biopic
+
+        $.each(bio.skills, function(data2) {
+            $('#skills').append(HTMLskills.replace('%data%', bio.skills[data2]));
         });
+
+        // adding all contact info to header as well as footer of the page
+
+        $.each(bio.contacts, function(data1, data2) {
+            $('#topContacts').append(HTMLcontactGeneric.replace("%contact%", data1).replace('%data%', data2));
+            $('#footerContacts').append(HTMLcontactGeneric.replace("%contact%", data1).replace('%data%', data2));
+        }); 
 
     }
 
 };
+
+bio.display(); // DISPLAYING ALL BIO ON PAGE
+
 
 // EDUCATION SECTION INCLUDING DISPLAY FUNCTION
 
@@ -71,39 +80,51 @@ var education = {
 
         // SCHOOL EDUCATION
 
-        $.each(education.schools, function(ed) {
+        $.each(education.schools, function(edu) {
 
-            $('#education').append(HTMLschoolStart); // header
+            $('#education').append(HTMLschoolStart); // this appends SCHOOL EDUCATION to #education header
 
             var educations = education.schools;
 
-            var sName = HTMLschoolName.replace('%data%', educations[ed].name).replace("#", educations[ed].url);
-            var sDates = HTMLschoolDates.replace('%data%', educations[ed].dates);
-            var sLocation = HTMLschoolLocation.replace('%data%', educations[ed].location);
-            var sDegree = HTMLschoolDegree.replace('%data%', educations[ed].degree);
-            var sMajors = HTMLschoolMajor.replace('%data%', educations[ed].majors);
+            var myName = HTMLschoolName.replace('%data%', educations[edu].name).replace("#", educations[edu].url);
+            var myDegree = HTMLschoolDegree.replace('%data%', educations[edu].degree);
+            $('.education-entry:last').append(myName + myDegree);
 
-            $('.education-entry:last').append(sName + sDegree + sDates + sLocation + sMajors);
+            var myDates = HTMLschoolDates.replace('%data%', educations[edu].dates);
+            $('.education-entry:last').append(myDates);
+
+            var myLocation = HTMLschoolLocation.replace('%data%', educations[edu].location);
+            $('.education-entry:last').append(myLocation);
+
+            var myMajors = HTMLschoolMajor.replace('%data%', educations[edu].majors);
+            $('.education-entry:last').append(myMajors);
         });
 
         // ONLINE COURSES
 
-        $('#education').append(HTMLonlineClasses); // header
+        $('#education').append(HTMLonlineClasses); // this appends ONLINE EDUCATION to #education header
 
-        $.each(education.onlineCourses, function(ed) {
+        $.each(education.onlineCourses, function(edu) {
             $('#education').append(HTMLschoolStart);
 
             var onlineEd = education.onlineCourses;
 
-            var oTitle = HTMLonlineTitle.replace('%data%', onlineEd[ed].title);
-            var oSchool = HTMLonlineSchool.replace('%data%', onlineEd[ed].school);
-            var oDates = HTMLonlineDates.replace('%data%', onlineEd[ed].dates);
-            var oUrl = HTMLonlineURL.replace("#", onlineEd[ed].url).replace('%data%', onlineEd[ed].url);
+            var myTitle = HTMLonlineTitle.replace('%data%', onlineEd[edu].title);
+            var mySchool = HTMLonlineSchool.replace('%data%', onlineEd[edu].school);
+            $('.education-entry:last').append(myTitle + mySchool);
 
-            $('.education-entry:last').append(oTitle + oSchool + oDates + oUrl);
+            var myDates = HTMLonlineDates.replace('%data%', onlineEd[edu].dates);
+            $('.education-entry:last').append(myDates);
+
+            var myUrl = HTMLonlineURL.replace("#", onlineEd[edu].url).replace('%data%', onlineEd[edu].url);
+            $('.education-entry:last').append(myUrl);
+
         });
     }
 };
+
+education.display(); // DISPLAYING EDUCATION ON PAGE
+
 
 // WORK SECTION INCLUDING DISPLAY FUNCTION
 
@@ -111,7 +132,7 @@ var work = {
     "jobs": [{
             "description": [
                 "Design + create mobile-first responsive websites and landing panges for clients.",
-                // "Create unique web experiences using HTML5, CSS3, and JavaScript"
+                // "Create unique web experiences using HTML5, CSS3, and JavaScript" (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Freelance",
             "title": "Web Developer",
@@ -121,7 +142,7 @@ var work = {
         {
             "description": [
                 "Created 30+ HTML/CSS responsive email templates as well as landing pages.",
-                // "Delivered 25+ nurturing campaigns with 20%+ open% in monthly basis."
+                // "Delivered 25+ nurturing campaigns with 20%+ open% in monthly basis." (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Apttus",
             "title": "Marketing Developer",
@@ -131,17 +152,17 @@ var work = {
         {
             "description": [
                 "Executed social media, marketing programs, and website development resulting in an increase of image branding + new leads in the Bay Area of 45%+ YOY.",
-                // "Implemented SEO strategies on website links and backlinks for organic results."
+                // "Implemented SEO strategies on website links and backlinks for organic results." (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Coldwell Banker",
-            "title": "Marketing Specialist",
+            "title": "Marketing Web Developer",
             "dates": "june 2011 - december 2016",
             "location": "San Francisco, CA, US"
         },
         {
             "description": [
                 "Managed sales team, hiring, inventory and restocking.",
-                // "Grew business 20% year-over-year."
+                // "Grew business 20% year-over-year." (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Hercules SA",
             "title": "Retail Store Manager",
@@ -150,25 +171,33 @@ var work = {
         }],
     "display": function() {
 
-        $.each(work.jobs, function(job) {
+        $.each(work.jobs, function(j) {
 
-            $('#workExperience').append(HTMLworkStart); // header
+            $('#workExperience').append(HTMLworkStart); // this appends WORK EXPERIENCE to #workExperience header
 
-            var myJobs = work.jobs[job];
+            var myJobs = work.jobs[j];
 
             var myEmployer = HTMLworkEmployer.replace('%data%', myJobs.employer);
             var myTitle = HTMLworkTitle.replace('%data%', myJobs.title);
-            var myDates = HTMLworkDates.replace('%data%', myJobs.dates);
-            var myLocation = HTMLworkLocation.replace('%data%', myJobs.location);
-            var myDescription = HTMLworkDescription.replace('%data%', myJobs.description);
+            $('.work-entry:last').append(myEmployer + ' ' + myTitle);
 
-            $('.work-entry:last').append(myEmployer + ' ' + myTitle + myDates + myLocation + myDescription);
+            var myDates = HTMLworkDates.replace('%data%', myJobs.dates);
+            $('.work-entry:last').append(myDates);
+
+            var myLocation = HTMLworkLocation.replace('%data%', myJobs.location);
+            $('.work-entry:last').append(myLocation);
+
+            var myDescription = HTMLworkDescription.replace('%data%', myJobs.description);
+            $('.work-entry:last').append(myDescription);
 
         });
 
     }
 
 };
+
+work.display(); // DISPLAYING WORK ON PAGE
+
 
 // PROJECTS SECTION INCLUDING DISPLAY FUNCTION
 
@@ -199,21 +228,24 @@ var projects = {
         }],
     "display": function() {
 
-        $.each(projects.projects, function(p) {
+        $.each(projects.projects, function(proj) {
 
-            $('#projects').append(HTMLprojectStart); // header
+            $('#projects').append(HTMLprojectStart); // this appends PROJECTS to #projects header
 
-            var projectss = projects.projects[p];
+            var projectss = projects.projects[proj];
 
-            var pTitle = HTMLprojectTitle.replace('%data%', projectss.title);
-            var pDates = HTMLprojectDates.replace('%data%', projectss.dates);
-            var pDescription = HTMLprojectDescription.replace('%data%', projectss.description);
+            var myTitle = HTMLprojectTitle.replace('%data%', projectss.title);
+            $('.project-entry:last').append(myTitle);
 
-            $('.project-entry:last').append(pTitle + pDates + pDescription);
+            var myDates = HTMLprojectDates.replace('%data%', projectss.dates);
+            $('.project-entry:last').append(myDates);
 
-            $.each(projectss.images, function(i) {
-                var pImages = HTMLprojectImage.replace('%data%', projectss.images[i]);
-                $('.project-entry:last').append(pImages);
+            var myDescription = HTMLprojectDescription.replace('%data%', projectss.description);
+            $('.project-entry:last').append(myDescription);
+
+            $.each(projectss.images, function(img) {
+                var myImages = HTMLprojectImage.replace('%data%', projectss.images[img]);
+                $('.project-entry:last').append(myImages);
             });
 
         });
@@ -222,15 +254,10 @@ var projects = {
 
 };
 
-// DISPLAYING ALL BIO, EDUCATION, WORK, AND PROJECTS ON PAGE
-
-bio.display();
-education.display();
-work.display();
-projects.display();
+projects.display(); // DISPLAYING PROJECTS ON PAGE
 
 
-// BUILD AND SHOW MAP
+// SHOWING MAP AT LAST
 
 function displayMap() {
     $('#mapDiv').append(googleMap);
