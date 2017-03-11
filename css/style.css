@@ -23,12 +23,12 @@ h6 {
 .work-entry,
 .project-entry {
     padding: 0 5%;
-    color: #fff;
+    color: #111;
 }
 
 h1 {
     font-size: 40px;
-    color: #fff;
+    color: #111;
     line-height: 48px;
     display: inline;
 }
@@ -36,7 +36,7 @@ h1 {
 h2 {
     font-weight: bold;
     font-size: 24px;
-    color: #fff;
+    color: #111;
     line-height: 29px;
     padding: 10px;
     text-transform: uppercase;
@@ -46,7 +46,7 @@ h2 {
 h3 {
     margin-top: 5px;
     font-size: 22px;
-    color: #fff;
+    color: #111;
     line-height: 22px;
 }
 
@@ -75,19 +75,19 @@ h5 {
 .location-text {
     font-style: italic;
     font-size: 14px;
-    color: #999;
+    color: #555;
     line-height: 16px;
     float: right;
 }
 
 p {
     font-size: 14px;
-    color: #888;
+    color: #111;
     line-height: 21px;
 }
 
 a {
-    color: #f8f8f8;
+    color: #111;
     text-decoration: none;
     margin-top: 10px;
     display: block;
@@ -96,12 +96,12 @@ a {
 .welcome-message {
     font-style: italic;
     font-size: 18px;
-    color: #f3f3f3;
+    color: #111;
     line-height: 28px;
 }
 
 #skills-h3 {
-    color: #FFFF00;
+    color: #607D8B;
     font-style: normal;
     text-transform: uppercase;
     display: none;
@@ -110,17 +110,17 @@ a {
 }
 
 .yellow {
-    background-color: #FFFF00;
+    background-color: #607D8B;
 }
 
 .orange-text {
-    color: #fff;
+    color: #111;
 }
 
 .white-text {
     font-weight: bold;
     font-size: 16px;
-    color: #fff;
+    color: #111;
     padding-bottom: 3px;
 }
 
@@ -131,12 +131,12 @@ a {
 }
 
 .dark-gray {
-    background-color: #555;
+    background-color: #111;
 }
 
 /* TODO: Replace with image later */
 #header, #workExperience, #projects, #education, #mapDiv, #lets-connect {
-    background-color: #272727;
+    background-color: #fafafa;
 }
 
 .flex-box {
@@ -175,7 +175,7 @@ img {
 }
 
 span {
-    color: #FFFF00;
+    color: #111F00;
     font-size: 20px;
     padding-left: 10px;
 }
