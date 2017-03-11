@@ -6,8 +6,8 @@
 
 var bio = {
     "name": "Richard Chan",
-    "role": "Front-End Engineer",
-    "welcomeMessage": "Hello there! My name is Richard and I'm a self-taught Web Developer creating beautiful website projects.",
+    "role": "Front-End Developer",
+    "welcomeMessage": "Hey there! My name is Richard and I believe in helping people create meaningful experiences through web development.",
     "biopic": "images/small.jpeg",
     "contacts": {
         "website": "richardchan.me",
@@ -17,7 +17,7 @@ var bio = {
         "github": "@rchrdchn",
         "location": "California"
     },
-    "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "JSON / AJAX", "Sketch / Adobe Photoshop", "WordPress"],
+    "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "JSON / AJAX", "Sketch / Adobe Photoshop", "WordPress / Squarespace", "Git / Github", "Microsoft Office", "Salesforce / Marketo"],
     "display": function() {
 
         $("#header").prepend(HTMLheaderRole.replace('%data%', bio.role)); // this makes ROLE shows up on top
@@ -50,7 +50,16 @@ var bio = {
 // EDUCATION SECTION INCLUDING DISPLAY FUNCTION
 
 var education = {
-    "schools": [{
+    "schools": [
+        {
+            "name": "Codify Academy",
+            "location": "San Francisco, California",
+            "degree": "Front-End Development",
+            "dates": "2017",
+            "majors": ["Web Development"],
+            "url": "http://codifyacademy.com/",
+        },
+        {
             "name": "City University of Hong Kong",
             "location": "Hong Kong SAR, China",
             "degree": "Bachelor's of Science",
@@ -68,7 +77,7 @@ var education = {
         }
     ],
     "onlineCourses": [{
-        "title": "Front-End Web Development",
+        "title": "Front-End Web Development Nanodegree",
         "school": "Udacity",
         "dates": "2017",
         "url": "https://www.udalocation.com/course/front-end-web-developer-nanodegree--nd001",
@@ -126,11 +135,11 @@ var education = {
 var work = {
     "jobs": [{
             "description": [
-                "Design + create mobile-first responsive websites and landing panges for clients.",
+                "Create + maintain Mobile-First responsive websites and landing pages for clients.",
                 // "Create unique web experiences using HTML5, CSS3, and JavaScript" (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Freelance",
-            "title": "Web Developer",
+            "title": "Front-End Developer",
             "dates": "january 2016 - present",
             "location": "California, US"
         },
@@ -146,7 +155,7 @@ var work = {
         },
         {
             "description": [
-                "Executed social media, marketing programs, and website development resulting in an increase of image branding + new leads in the Bay Area of 45%+ YOY.",
+                "Designed, developed and maintained websites and landing pages for real estate agents utilizing HTML, CSS, WordPress, and Squarespace.",
                 // "Implemented SEO strategies on website links and backlinks for organic results." (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Coldwell Banker",
@@ -156,8 +165,8 @@ var work = {
         },
         {
             "description": [
-                "Managed sales team, hiring, inventory and restocking.",
-                // "Grew business 20% year-over-year." (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
+                "Managed sales team, hiring, inventory and restocking",
+                " Grew business 20% year-over-year." // (COMMENTED OUT UNTIL I FIND HOW TO CREATE A SECOND BULLET POINT WITH A BREAK)
             ],
             "employer": "Hercules SA",
             "title": "Retail Store Manager",
@@ -194,63 +203,63 @@ var work = {
 
 // PROJECTS SECTION INCLUDING DISPLAY FUNCTION
 
-var project = {
-    "projects": [{
-            "title": "Classic Arcade Game",
-            "dates": "2017",
-            "description": "You will be provided with visual assets and a game loop engine; using these tools you must add a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger.",
-            "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
-        },
-        {
-            "title": "Website Optimization",
-            "dates": "2017",
-            "description": "You will optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.",
-            "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
-        },
-        {
-            "title": "Neighborhood Map",
-            "dates": "2017",
-            "description": "You will develop a single-page application featuring a map of your neighborhood or a neighborhood you would like to visit. You will then add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. You will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).",
-            "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
-        },
-        {
-            "title": "Feed Reader Testing",
-            "dates": "2017",
-            "description": "In this project, you will be learning about testing with Javascript. Testing is an important part of the development process and many organizations practice a standard known as 'test-driven development' or TDD. This is when developers write tests first, before they ever start developing their application. Whether you work in an organization that writes tests extensively to inform product development or one that uses tests to encourage iteration, testing has become an essential skill in modern web development!",
-            "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
-        }],
-    "display": function() {
+// var project = {
+//     "projects": [{
+//             "title": "Classic Arcade Game",
+//             "dates": "2017",
+//             "description": "You will be provided with visual assets and a game loop engine; using these tools you must add a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger.",
+//             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
+//         },
+//         {
+//             "title": "Website Optimization",
+//             "dates": "2017",
+//             "description": "You will optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.",
+//             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
+//         },
+//         {
+//             "title": "Neighborhood Map",
+//             "dates": "2017",
+//             "description": "You will develop a single-page application featuring a map of your neighborhood or a neighborhood you would like to visit. You will then add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. You will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).",
+//             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
+//         },
+//         {
+//             "title": "Feed Reader Testing",
+//             "dates": "2017",
+//             "description": "In this project, you will be learning about testing with Javascript. Testing is an important part of the development process and many organizations practice a standard known as 'test-driven development' or TDD. This is when developers write tests first, before they ever start developing their application. Whether you work in an organization that writes tests extensively to inform product development or one that uses tests to encourage iteration, testing has become an essential skill in modern web development!",
+//             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
+//         }],
+//     "display": function() {
 
-        $.each(project.projects, function(proj) {
+//         $.each(project.projects, function(proj) {
 
-            $('#projects').append(HTMLprojectStart); // this appends PROJECTS to #projects header
+//             $('#projects').append(HTMLprojectStart); // this appends PROJECTS to #projects header
 
-            var projectsss = project.projects[proj];
+//             var projectsss = project.projects[proj];
 
-            var myTitle = HTMLprojectTitle.replace('%data%', projectsss.title);
-            $('.project-entry:last').append(myTitle);
+//             var myTitle = HTMLprojectTitle.replace('%data%', projectsss.title);
+//             $('.project-entry:last').append(myTitle);
 
-            var myDates = HTMLprojectDates.replace('%data%', projectsss.dates);
-            $('.project-entry:last').append(myDates);
+//             var myDates = HTMLprojectDates.replace('%data%', projectsss.dates);
+//             $('.project-entry:last').append(myDates);
 
-            var myDescription = HTMLprojectDescription.replace('%data%', projectsss.description);
-            $('.project-entry:last').append(myDescription);
+//             var myDescription = HTMLprojectDescription.replace('%data%', projectsss.description);
+//             $('.project-entry:last').append(myDescription);
 
-            $.each(projectsss.images, function(img) {
-                var myImages = HTMLprojectImage.replace('%data%', projectsss.images[img]);
-                $('.project-entry:last').append(myImages);
-            });
+//             $.each(projectsss.images, function(img) {
+//                 var myImages = HTMLprojectImage.replace('%data%', projectsss.images[img]);
+//                 $('.project-entry:last').append(myImages);
+//             });
 
-        });
+//         });
 
-    }
+//     }
 
-};
+// };
 
 bio.display(); // DISPLAYING ALL BIO ON PAGE
 education.display(); // DISPLAYING EDUCATION ON PAGE
 work.display(); // DISPLAYING WORK ON PAGE
-project.display(); // DISPLAYING PROJECTS ON PAGE
+// project.display(); // DISPLAYING PROJECTS ON PAGE
 
 
 // SHOWING MAP AT LAST
