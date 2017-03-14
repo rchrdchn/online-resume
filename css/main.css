@@ -1,0 +1,223 @@
+* {
+    background-color: #fafafa;
+    color: #111 !important;
+    box-sizing: border-box;
+}
+
+#logo {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    text-align: left;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    letter-spacing: 0.5px;
+    display: inline-block;
+}
+
+/* Side Nav Bar action and function  */
+.top-nav {
+    display: inline-block;
+    position: relative;
+    padding: 5px;
+    text-align: left;
+    text-decoration: none !important;
+    padding-bottom: 5px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.top-nav:before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    transition: width 0s ease, background 1s ease;
+}
+
+.top-nav:after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    height: 3px;
+    width: 0;
+    background: #607D8B;
+    transition: width 1s ease;
+}
+
+.top-nav:hover:before {
+    width: 100%;
+    background: #607D8B;
+    transition: width .7s ease;
+    text-decoration: none;
+}
+
+.top-nav:hover:after {
+    width: 100%;
+    background: transparent;
+    transition: all 0s ease;
+    text-decoration: none;
+}
+
+.top-nav-project {
+    position: relative;
+    padding: 5px;
+    text-align: left;
+    padding-bottom: 5px;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    color: #37474F !important;
+}
+
+ul {
+    position: relative;
+    list-style-type: none;
+    text-align: left;
+    margin: 0px;
+    padding: 0px 0px 10px 40px;
+    display: block;
+    height: 100%;
+}
+/* PROJECT EXPLAINATION */
+
+.title {
+    font-family: "Montserrat", Helvetica, sans-serif;
+    font-size: 38px;
+    font-weight: 400;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding: 55px 15px 35px 15px;
+}
+
+.work {
+    margin-bottom: 150px;
+}
+
+.gray:hover {
+    background-color: #e1e1e0;
+}
+
+.black:hover {
+    background-color: #211614;
+}
+
+.yellow:hover {
+    background-color: #f5a310;
+}
+
+.white:hover {
+    background-color: #ffffff;
+}
+
+.text {
+    font-family: "Open Sans", sans-serif;
+}
+
+.wireframe {
+    width: 40%;
+    padding: 10px;
+}
+
+/* Footer */
+
+.social-media {
+    position: fixed;
+}
+
+.fav-icons {
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.footer {
+    text-align: center;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+}
+
+p {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    display: inline-block;
+    padding: 2px;
+    text-align: left;
+}
+
+/* About Page look */
+
+.highlight {
+    color: #FFFF00 !important;
+    font-size: 18px;
+    letter-spacing: 0.5px;
+}
+
+.about-description {
+    font-family: "Open Sans", Helvetica, sans-serif;
+    font-size: 16px;
+    text-align: left;
+    padding-bottom: 8px;
+    display: inline-block;
+}
+
+.button__text {
+    font-size: 18px !important;
+    font-family: "Open Sans", Helvetica, sans-serif;
+    letter-spacing: 0.5px;
+}
+
+
+/* Media Query at 992px */
+@media only screen and (max-width:992px) {
+    
+    body {
+        margin-right: auto;
+        margin-left: auto;
+        box-sizing: border-box !important;
+        overflow-x: hidden;
+    }
+
+    #list {
+        text-align: center;
+    }
+
+    /* #showcase {
+        width: 100%;
+    } */
+
+    /* #info {
+        width: 100%;
+    } */
+
+    .portfolio {
+        margin: 0 auto;
+        display: block;
+    }
+
+    .portfolio-desc {
+        display: block;
+        text-align: center;
+    }
+
+    ul {
+        padding-left: 0;
+    }
+    
+    /* About Page */
+
+    .about-picture {
+        margin: 0 auto;
+        display: block;
+        padding-bottom: 15px;
+    }
+}

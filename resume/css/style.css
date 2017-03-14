@@ -1,0 +1,240 @@
+body,
+div,
+ul,
+li,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    padding: 0;
+    margin: 0;
+    font-family: "Helvetica", sans-serif;
+    letter-spacing: 0.5px;
+}
+
+.clear-fix {
+    overflow: auto;
+}
+
+.education-entry,
+.work-entry,
+.project-entry {
+    padding: 0 5%;
+    color: #111;
+}
+
+h1 {
+    font-size: 40px;
+    color: #111;
+    line-height: 48px;
+    display: inline;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 24px;
+    color: #111;
+    line-height: 29px;
+    padding: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h3 {
+    margin-top: 5px;
+    font-size: 22px;
+    color: #111;
+    line-height: 22px;
+}
+
+h4 {
+    font-weight: bold;
+    font-size: 14px;
+    color: #4a4a4a;
+    line-height: 17px;
+}
+
+h2,
+h3,
+h4,
+h5 {
+    padding: 10px 5%;
+}
+
+.date-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #777;
+    line-height: 16px;
+    float: left;
+}
+
+.location-text {
+    font-style: italic;
+    font-size: 14px;
+    color: #555;
+    line-height: 16px;
+    float: right;
+}
+
+p {
+    font-size: 14px;
+    color: #111;
+    line-height: 21px;
+}
+
+a {
+    color: #111;
+    text-decoration: none;
+    margin-top: 10px;
+    display: block;
+}
+
+.welcome-message {
+    font-style: italic;
+    font-size: 18px;
+    color: #111;
+    line-height: 28px;
+}
+
+#skills-h3 {
+    color: #607D8B;
+    font-style: normal;
+    text-transform: uppercase;
+    display: none;
+    letter-spacing: 1px;
+    padding: 10px 10px 5px 10px;
+}
+
+.yellow {
+    background-color: #607D8B;
+}
+
+.orange-text {
+    color: #111;
+}
+
+.white-text {
+    font-weight: bold;
+    font-size: 16px;
+    color: #111;
+    padding-bottom: 3px;
+}
+
+.gray {
+    background-color: #f3f3f3;
+    padding-bottom: 10px;
+    clear: both;
+}
+
+.dark-gray {
+    background-color: #111;
+}
+
+/* TODO: Replace with image later */
+#header, #workExperience, #projects, #education, #mapDiv, #lets-connect {
+    background-color: #fafafa;
+}
+
+.flex-box {
+    display: -webkit-flex;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    padding: 10px;
+}
+
+.center-content {
+    padding: 2.5% 5%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.biopic {
+    float: left;
+    padding: 10px;
+    width: 210px;
+    display: none;
+}
+
+img {
+    padding: 10px;
+}
+
+span {
+    color: #111F00;
+    font-size: 20px;
+    padding-left: 10px;
+}
+
+#lets-connect {
+    text-align: center;
+}
+
+#connect {
+    color: #000;
+}
+
+#footerContacts {
+    padding-bottom: 20px;
+}
+
+/* Media queries to handle various device widths */
+
+@media only screen and (max-width: 1024px) {
+    #lets-connect {
+        margin-top: 5%;
+    };
+}
+
+@media only screen and (max-width:900px) {
+    .biopic {
+        width: 175px;
+    };
+}
+
+@media only screen and (max-width: 750px) {
+    #lets-connect {
+        margin-top: 10%;
+    }
+
+    .biopic {
+        width: 150px;
+    }
+
+    .welcome-message {
+        display: none;
+    };
+}
+
+#map {
+    display: block;
+    height: 100%;
+    margin: 0 5%;
+}
+
+#mapDiv {
+    height: 400px;
+    width: 100%;
+    padding-bottom: 5%;
+}
+
+@media only screen and (min-width: 750px) {
+    #skills-h3,
+  .biopic {
+        display: block;
+    };
+}
