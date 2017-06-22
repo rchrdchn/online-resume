@@ -213,26 +213,26 @@ var work = {
 var project = {
     "projects": [{
             "title": "Classic Arcade Game",
-            "dates": "2017",
-            "description": "You will be provided with visual assets and a game loop engine; using these tools you must add a number of entities to the game including the player characters and enemies to recreate the classic arcade game Frogger.",
+            "dates": "February - March 2017",
+            "description": "A personal project that recreates the Classic Arcade Game Frogger using HTML5 canvas, JavaScript and Object-Oriented Programming.",
             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
         },
         {
             "title": "Website Optimization",
-            "dates": "2017",
-            "description": "You will optimize a provided website with a number of optimization- and performance-related issues so that it achieves a target PageSpeed score and runs at 60 frames per second.",
+            "dates": "March 2017",
+            "description": "Project's goal was to optimize the site so it performs at 60 Frames per Second (FPS) by getting rid of all the jank when resizing and scrolling through the website.",
             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
         },
         {
             "title": "Neighborhood Map",
-            "dates": "2017",
-            "description": "You will develop a single-page application featuring a map of your neighborhood or a neighborhood you would like to visit. You will then add additional functionality to this application, including: map markers to identify popular locations or places you’d like to visit, a search function to easily discover these locations, and a listview to support simple browsing of all locations. You will then research and implement third-party APIs that provide additional information about each of these locations (such as StreetView images, Wikipedia articles, Yelp reviews, etc).",
+            "dates": "April - May 2017",
+            "description": "After living and traveling around Hong Kong for a year, most of my nomad friends traveling there often ask for suggestions such as what to do, where to go, and what to eat. As a result, I've decided to scratch my own itch by building a single-page web application featuring a map with markers and a list of my favorite locations. This list of locations include some of the places I used to hang out when I lived there. In short, if you are visiting Hong Kong, you should definitely check these places out. I am sure you will love them!",
             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
         },
         {
             "title": "Feed Reader Testing",
-            "dates": "2017",
-            "description": "In this project, you will be learning about testing with Javascript. Testing is an important part of the development process and many organizations practice a standard known as 'test-driven development' or TDD. This is when developers write tests first, before they ever start developing their application. Whether you work in an organization that writes tests extensively to inform product development or one that uses tests to encourage iteration, testing has become an essential skill in modern web development!",
+            "dates": "May 2017",
+            "description": "Implemented a series of behavior driven development tests using Jasmine for a pre-existing web-based application that reads RSS feeds as part of the Udacity Front-End Nanodegree - tested logic of the application, event handling and DOM manipulation.",
             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
         }],
     "display": function() {
