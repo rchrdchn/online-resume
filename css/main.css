@@ -123,6 +123,12 @@ ul {
     font-family: "Open Sans", sans-serif;
 }
 
+.text-tech {
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+}
+
 .wireframe {
     width: 40%;
     padding: 10px;
