@@ -39,7 +39,7 @@ var bio = {
 
         $.each(bio.contacts, function(data1, data2) {
             $('#topContacts').append(HTMLcontactGeneric.replace("%contact%", data1).replace('%data%', data2));
-            $('#footerContacts').append(HTMLcontactGeneric.replace("%contact%", data1).replace('%data%', data2));
+            // $('#footerContacts').append(HTMLcontactGeneric.replace("%contact%", data1).replace('%data%', data2));
         }); 
 
     }
@@ -210,7 +210,8 @@ var work = {
 
 // PROJECTS SECTION INCLUDING DISPLAY FUNCTION
 var project = {
-    "projects": [{
+    "projects": [
+        {
             "title": "Classic Arcade Game",
             "dates": "February - March 2017",
             "description": "A personal project that recreates the Classic Arcade Game Frogger using HTML5 canvas, JavaScript and Object-Oriented Programming.",
@@ -233,7 +234,8 @@ var project = {
             "dates": "May 2017",
             "description": "Implemented a series of behavior driven development tests using Jasmine for a pre-existing web-based application that reads RSS feeds as part of the Udacity Front-End Nanodegree - tested logic of the application, event handling and DOM manipulation.",
             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
-        }],
+        }
+        ],
     "display": function() {
 
         $.each(project.projects, function(proj) {
