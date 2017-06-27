@@ -224,24 +224,28 @@ var project = {
             "dates": "February - March 2017",
             "description": "A personal project that recreates the Classic Arcade Game Frogger using HTML5 canvas, JavaScript and Object-Oriented Programming.",
             "images": ["images/frogger-devices.png"],
+            "url": "http://richardchan.me/arcade-game/frogger.html"
         },
         {
             "title": "Website Optimization",
             "dates": "March 2017",
             "description": "Project's goal was to optimize the site so it performs at 60 Frames per Second (FPS) by getting rid of all the jank when resizing and scrolling through the website.",
             "images": ["images/60fps-devices.png"],
+            "url": "http://richardchan.me/60fps/pizza.html"
         },
         {
             "title": "Neighborhood Map",
             "dates": "April - May 2017",
             "description": "After living and traveling around Hong Kong for a year, most of my nomad friends traveling there often ask for suggestions such as what to do, where to go, and what to eat. As a result, I've decided to scratch my own itch by building a single-page web application featuring a map with markers and a list of my favorite locations. This list of locations include some of the places I used to hang out when I lived there. In short, if you are visiting Hong Kong, you should definitely check these places out. I am sure you will love them!",
             "images": ["images/neighborhood-map-devices.png"],
+            "url": "http://richardchan.me/neighborhood-map/map.html"
         },
         {
             "title": "Feed Reader Testing",
             "dates": "May 2017",
             "description": "Implemented a series of behavior driven development tests using Jasmine for a pre-existing web-based application that reads RSS feeds as part of the Udacity Front-End Nanodegree - tested logic of the application, event handling and DOM manipulation.",
             "images": ["http://assets.barcroftmedia.com.s3-website-eu-west-1.amazonaws.com/assets/images/recent-images-11.jpg", ],
+            "url": "http://richardchan.me/arcade-game/frogger.html"
         }
         ],
     "display": function() {
@@ -252,7 +256,7 @@ var project = {
 
             var projectsss = project.projects[proj];
 
-            var myTitle = HTMLprojectTitle.replace('%data%', projectsss.title);
+            var myTitle = HTMLprojectTitle.replace('%data%', projectsss.title).replace('#', projectsss.url);
             $('.project-entry:last').append(myTitle);
 
             var myDates = HTMLprojectDates.replace('%data%', projectsss.dates);
