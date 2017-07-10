@@ -16,7 +16,7 @@ var bio = {
         "github": "@rchrdchn",
         "location": "California"
     },
-    "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "JSON / AJAX / APIs", "Bootstrap", "Sketch", "Adobe Creative Suite", "WordPress", "Git / Github", "Microsoft Office", "Salesforce / Marketo"],
+    "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "ES6 / ReactJS", "JSON / AJAX / APIs", "Bootstrap", "Git / Github", "Sketch", "Adobe Creative Suite"],
     "display": function() {
 
         $("#header").prepend(HTMLheaderRole.replace('%data%', bio.role)); // this makes ROLE shows up on top
@@ -50,14 +50,6 @@ var bio = {
 
 var education = {
     "schools": [
-        {
-            "name": "Codify Academy",
-            "location": "San Francisco, California",
-            "degree": "Front-End Development",
-            "dates": "2017",
-            "majors": ["Web Development"],
-            "url": "http://codifyacademy.com/",
-        },
         {
             "name": "City University of Hong Kong",
             "location": "Hong Kong SAR, China",
