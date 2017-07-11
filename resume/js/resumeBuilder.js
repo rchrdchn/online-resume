@@ -16,7 +16,7 @@ var bio = {
         "github": "@rchrdchn",
         "location": "California"
     },
-    "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "ES6 / ReactJS", "JSON / AJAX / APIs", "Bootstrap", "Git / Github", "Sketch", "Adobe Creative Suite"],
+    "skills": ["HTML5 / CSS3 / SASS", "JavaScript / jQuery", "ES6 / ReactJS", "JSON / AJAX / APIs", "Bootstrap", "Git / Github", "Sketch / Zeplin", "Adobe Creative Suite"],
     "display": function() {
 
         $("#header").prepend(HTMLheaderRole.replace('%data%', bio.role)); // this makes ROLE shows up on top
@@ -138,7 +138,8 @@ var work = {
             "employer": "Ascendify",
             "title": "Web Developer Intern",
             "dates": "june 2017 - present",
-            "location": "San Francisco, CA"
+            "location": "San Francisco, CA",
+            "url": "http://www.ascendify.com/"
         },
         {
             "description": [
@@ -148,7 +149,8 @@ var work = {
             "employer": "Freelance",
             "title": "Front-End Developer",
             "dates": "january 2016 - present",
-            "location": "California, US"
+            "location": "California, US",
+            "url": "http://richardchan.me/"
         },
         {
             "description": [
@@ -158,7 +160,8 @@ var work = {
             "employer": "Apttus",
             "title": "Marketing Developer",
             "dates": "january 2015 - october 2016",
-            "location": "San Mateo, CA, US"
+            "location": "San Mateo, CA, US",
+            "url": "http://apttus.com/"
         },
         {
             "description": [
@@ -168,7 +171,8 @@ var work = {
             "employer": "Coldwell Banker",
             "title": "Marketing Web Developer",
             "dates": "june 2011 - december 2016",
-            "location": "San Francisco, CA, US"
+            "location": "San Francisco, CA, US",
+            "url": "https://www.coldwellbankerhomes.com/"
         },
         {
             "description": [
@@ -178,7 +182,8 @@ var work = {
             "employer": "Hercules SA",
             "title": "Retail Store Manager",
             "dates": "june 2005 - july 2008",
-            "location": "Maracay, Venezuela"
+            "location": "Maracay, Venezuela",
+            "url": "http://richardchan.me/"
         }],
     "display": function() {
 
@@ -188,7 +193,7 @@ var work = {
 
             var myJobs = work.jobs[j];
 
-            var myEmployer = HTMLworkEmployer.replace('%data%', myJobs.employer);
+            var myEmployer = HTMLworkEmployer.replace('%data%', myJobs.employer).replace('#', myJobs.url);
             var myTitle = HTMLworkTitle.replace('%data%', myJobs.title);
             $('.work-entry:last').append(myEmployer + ' ' + myTitle);
 
